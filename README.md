@@ -21,7 +21,10 @@ Again, seems to be the prize collecting VRP problem. We adopted a similar greedy
 
 For the greedy approach, it was modified to allow up to two players to take one greedy step at a time using the same objective, except that we only used the Euclidean distance method (i.e. the one with square root).
 
-Total complexity is still `O(n^3)` as it largely follows our question 1 logic, where `n` is the number of flags, and also because we do not account for `m` as we analysed the results of sending out `2` players vs. `m` players – sending out only 2 players is almost always the better option for our algorithm design.
+Total complexity is still `O(n^3)` as it largely follows our question 1 logic, where `n` is the number of flags. We also do not account for `m` as we analysed the results of sending out `2` players vs. `m` players – sending out only 2 players is almost always the better option for our algorithm design.
+
+PS. We tried k-means clustering but we gave up because it was challenging to find the number of clusters to form. We felt that using both `n` or `p/n` didn't really make sense as in most cases, our paths became longer than our one-man-show method. Hence, we concluded it may not be worth it to force out `n` routes for `n` players.
+
 
 ## To Run
 p2q1.py
@@ -34,7 +37,7 @@ p2q2.py
 py p2q2_main.py
 ```
 
-## Result
+## Results
 It works pretty okay when ranked relatively against 160+ other algorithms (ranked 2 of 161 overall), even though ours wasn't exactly very efficient and it probably won't scale compared to those who used k-means clustering for p2q2. Our algorithm will run really, really slow (~10s-ish) especially on clustered datasets when p is high.
 
 | Team ID | Score (/9) | Penalty for failed cases | Quality score (/6) | Performance score (/3) | No. of failed cases | Overall Rank T | Overall Rank Q | Rank0 Q | Rank1 Q | Rank2 Q | Rank3 Q | Rank4 Q | Rank5 Q | Rank6 Q | Rank7 Q | Rank8 Q | Rank9 Q | Rank10 Q | Rank11 Q | Rank12 Q | Rank13 Q | Rank14 Q | Rank15 Q | Results0 Q | Results1 Q | Results2 Q | Results3 Q | Results4 Q | Results5 Q | Results6 Q | Results7 Q | Results8 Q | Results9 Q | Results10 Q | Results11 Q | Results12 Q | Results13 Q | Results14 Q | Results15 Q | Overall Rank T | Rank0 T | Rank1 T | Rank2 T | Rank3 T | Rank4 T | Rank5 T | Rank6 T | Rank7 T | Rank8 T | Rank9 T | Rank10 T | Rank11 T | Rank12 T | Rank13 T | Rank14 T | Rank15 T | Results0 T | Results1 T | Results2 T | Results3 T | Results4 T | Results5 T | Results6 T | Results7 T | Results8 T | Results9 T | Results10 T | Results11 T | Results12 T | Results13 T | Results14 T | Results15 T |
@@ -55,3 +58,7 @@ Plotting out the points of the datasets (mixed, random and clustered).
 
 ![ct2](https://i.imgur.com/VzrXiiC.jpg)
 During the process, we also visualised our various approaches to ensure that our algorithm is really working. Here's how we visualised three different versions of our p2q1 algorithm using GPS Visualizer.
+
+## Authors
+
+Goi Jia Jian (@gjj) and Nicolas Wijaya (@nicoonnicolas)
