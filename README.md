@@ -61,4 +61,4 @@ During the process, we also visualised our various approaches to ensure that our
 
 ## Authors
 
-Goi Jia Jian (@gjj) and Nicolas Wijaya (@nicoonnicolas)
+Goi Jia Jian ([@gjj](https://github.com/gjj)) and Nicolas Wijaya ([@nicoonnicolas](https://github.com/nicoonnicolas))
