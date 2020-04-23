@@ -2,7 +2,7 @@
 
 COR-IS1702 Computational Thinking AY19/20 Term 2 Project 2
 
-## p2q1 Flag Game: Single Player
+## p2q1 Flag Game: Single Player 👩‍💻
 
 Seems to be a variant of TSP: prize collecting TSP. Our solver uses the greedy approach with objective to `max(points per distance travelled)` to construct an initial route, then use 2-opt to improve the initial route and thereafter, uses a trim function if the route returns more points than required.
 
@@ -12,7 +12,7 @@ So we decided to run the same greedy algorithm twice, both with the same objecti
 
 Total complexity of our solver is `O(n^3)`, where `n` is the number of flags – the worst case happens when `p = sum(flag points)` as the all flags will be part of the best route.
 
-## p2q2 Flag Game: Multi Player
+## p2q2 Flag Game: Multi Player 👫
 
 Again, seems to be the prize collecting VRP problem. We adopted a similar greedy + 2-opt approach for question 2, and we created greedy_multiple, try2opt_multiple and get_route_dist_multiple wrapper functions that loop through m (number of players) and call our question 1’s functions. We also have two decisions here:
 
