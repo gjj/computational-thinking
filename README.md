@@ -10,7 +10,8 @@ We found that in some cases, using the [Euclidean squared distance method](http:
 
 So we decided to run the same greedy algorithm twice, both with the same objective but different distance calculating method (first being the Euclidean distance using Mok’s method in `utility.py`, and second being the one that does not square root).
 
-Total complexity of our solver is `O(n^3)`, where `n` is the number of flags – the worst case happens when `p = sum(flag points)` as the all flags will be part of the best route.
+Total complexity of our solver is ![n3](https://render.githubusercontent.com/render/math?math=O(n^3))
+, where `n` is the number of flags – the worst case happens when `p = sum(flag points)` as the all flags will be part of the best route.
 
 ## p2q2 Flag Game: Multi Player 👫
 
@@ -21,7 +22,7 @@ Again, seems to be the prize collecting VRP problem. We adopted a similar greedy
 
 For the greedy approach, it was modified to allow up to two players to take one greedy step at a time using the same objective, except that we only used the Euclidean distance method (i.e. the one with square root).
 
-Total complexity is still `O(n^3)` as it largely follows our question 1 logic, where `n` is the number of flags. We also do not account for `m` as we analysed the results of sending out `2` players vs. `m` players – sending out only 2 players is almost always the better option for our algorithm design.
+Total complexity is still ![n3](https://render.githubusercontent.com/render/math?math=O(n^3)) as it largely follows our question 1 logic, where `n` is the number of flags. We also do not account for `m` as we analysed the results of sending out `2` players vs. `m` players – sending out only 2 players is almost always the better option for our algorithm design.
 
 PS. We tried k-means clustering but we gave up because it was challenging to find the number of clusters to form. We felt that using both `n` or `p/n` didn't really make sense as in most cases, our paths became longer than our one-man-show method. Hence, we concluded it may not be worth it to force out `n` routes for `n` players.
 
