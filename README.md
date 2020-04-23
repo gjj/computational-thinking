@@ -4,7 +4,7 @@ COR-IS1702 Computational Thinking AY19/20 Term 2 Project 2
 
 ## p2q1 Flag Game: Single Player 👩‍💻
 
-Seems to be a variant of TSP: prize collecting TSP. Our solver uses the greedy approach with objective to `max(points per distance travelled)` to construct an initial route, then use 2-opt to improve the initial route and thereafter, uses a trim function if the route returns more points than required.
+Variant of TSP. Our solver uses the greedy approach with objective to `max(points per distance travelled)` to construct an initial route, then use 2-opt to improve the initial route and thereafter, uses a trim function if the route returns more points than required.
 
 We found that in some cases, using the [Euclidean squared distance method](http://theory.stanford.edu/~amitp/GameProgramming/Heuristics.html#euclidean-distance-squared) return a much shorter route. No idea why, but thanks to [@xinweiiiii](https://github.com/xinweiiiii) for pointing it out.
 
@@ -15,7 +15,7 @@ Total complexity of our solver is ![n3](https://render.githubusercontent.com/ren
 
 ## p2q2 Flag Game: Multi Player 👫
 
-Again, seems to be the prize collecting VRP problem. We adopted a similar greedy + 2-opt approach for question 2, and we created `greedy_multiple`, `try2opt_multiple` and `get_route_dist_multiple` wrapper functions that loop through `m` (number of players) and call our question 1’s functions. We also have two decisions here:
+Again, a variant of VRP. We adopted a similar greedy + 2-opt approach for question 2, and we created `greedy_multiple`, `try2opt_multiple` and `get_route_dist_multiple` wrapper functions that loop through `m` (number of players) and call our question 1’s functions. We also have two decisions here:
 
 - When `n = 1`, immediately return our question 1’s `get_route()` results
 - When `p <= 800` (a threshold set by us), we run our `get_route()` in single player mode for comparison with our multiplayer algorithm later – complexity for `get_route()` is `O(n^3)`
